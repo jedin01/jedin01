@@ -34,6 +34,7 @@ public class AbnerLourenco {
         System.out.printf("🚀 Profissão: %s%n", profissao);
     }
 }
+```
 
 
 
