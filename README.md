@@ -7,7 +7,7 @@ public class AbnerLourenco {
     public static void main(String[] args) {
         // Criação do banner
         String nome = "Abner Lourenço";
-        String profissao = "Desenvolvedor Sometacks";
+        String profissao = "Desenvolvedor Somestacks";
         String mensagem = "Apaixonado por Tecnologia e Inovação";
 
         printBanner(nome, profissao, mensagem);
