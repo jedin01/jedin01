@@ -1,11 +1,15 @@
+<!-- Estatísticas do GitHub -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=jedin01&theme=dark&hide_border=true&include_all_commits=false&count_private=true" alt="GitHub Stats" />
+  
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=jedin01&theme=dark&hide_border=true&include_all_commits=false&count_private=true&layout=compact" alt="Top Languages" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=jedin01&theme=dark&hide_border=true" alt="GitHub Streak" />
+</p>
 
-![](https://github-readme-stats.vercel.app/api?username=jedin01&theme=dark&hide_border=false&include_all_commits=false&count_private=true)
-![](https://github-readme-streak-stats.herokuapp.com/?user=jedin01&theme=dark&hide_border=false)
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=jedin01&theme=dark&hide_border=false&include_all_commits=false&count_private=true&layout=compact)
 <br/>
 <br/>
 
-<h2 align="center">Languages and Tools:</h2>
+<h2 align="left">Languages and Tools:</h2>
 <br/>
 <br/>
 
