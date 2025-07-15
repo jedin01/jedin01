@@ -4,7 +4,7 @@
 #### What I Do
 
 - Build expressive digital products with a mix of **code, design & infrastructure**
-- Create illustrations, animations, and **3D content** for impactful interfaces
+- Create illustrations, animations, and **3D content**
 - Passionate about **automation**, **UI systems**, and **visual storytelling**
 
 ---
