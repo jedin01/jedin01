@@ -1,7 +1,7 @@
 👋 Hey there, i'm <strong>Abner</strong>
 <h3 >Full-Stack Developer | Illustrator | Systems & UI Designer</h3>
 
-### 🧠 What I Do
+### What I Do
 
 - Build expressive digital products with a mix of **code, design & infrastructure**
 - Create illustrations, animations, and **3D content** for impactful interfaces
@@ -9,7 +9,7 @@
 
 ---
 
-## 🚀 Tech Stack & Tools
+## Tech Stack & Tools
 
 <p>
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
@@ -23,11 +23,10 @@
    <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
   <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" />
 </p>
 
 
-## ☕ Support My Work
+## Support My Work
 
 If you enjoy what I do or want to encourage me to keep building, consider buying me a coffee:
 
