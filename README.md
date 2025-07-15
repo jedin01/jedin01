@@ -7,8 +7,6 @@
 - Create illustrations, animations, and **3D content**
 - Passionate about **automation**, **UI systems**, and **visual storytelling**
 
----
-
 #### Tech Stack & Tools
 
 <p>
