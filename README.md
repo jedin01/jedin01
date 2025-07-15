@@ -1,7 +1,7 @@
 👋 Hey there, i'm <strong>Abner</strong>
 <h3 >Full-Stack Developer | Illustrator | Systems & UI Designer</h3>
 
-### What I Do
+#### What I Do
 
 - Build expressive digital products with a mix of **code, design & infrastructure**
 - Create illustrations, animations, and **3D content** for impactful interfaces
@@ -9,7 +9,7 @@
 
 ---
 
-## Tech Stack & Tools
+#### Tech Stack & Tools
 
 <p>
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
