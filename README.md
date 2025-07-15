@@ -1,11 +1,5 @@
-<h1>👋 Hey there, i'm<strong>Abner</strong></h1>
-<h3 >💻 Full-Stack Developer | 🎨 Illustrator | 🧠 Systems & UI Designer</h3>
-
-<p>
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=1000&color=F59E0B&center=true&vCenter=true&width=435&lines=Designing+beautiful+systems...;Building+robust+digital+tools...;Illustrating+the+ideas+of+tomorrow." alt="Typing SVG" />
-</p>
-
----
+👋 Hey there, i'm <strong>Abner</strong>
+<h3 >Full-Stack Developer | Illustrator | Systems & UI Designer</h3>
 
 ### 🧠 What I Do
 
