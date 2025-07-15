@@ -1,5 +1,5 @@
 👋 Hey there, i'm <strong>Abner</strong>
-<h3 >Full-Stack Developer | Illustrator | Systems & UI Designer</h3>
+#### Full-Stack Developer | Illustrator | Systems & UI Designer
 
 #### What I Do
 
@@ -26,7 +26,7 @@
 </p>
 
 
-## Support My Work
+#### Support My Work
 
 If you enjoy what I do or want to encourage me to keep building, consider buying me a coffee:
 
