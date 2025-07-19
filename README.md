@@ -1,6 +1,6 @@
-## 👋 Hey there, i'm <strong>Abner</strong>
+## 👋 Hey, i'm <strong>Abner</strong>
 
-#### Tech Stack & Tools
+#### Tech Stack & Tools 
 
 <p align="left">
   <a href="https://skillicons.dev">
