@@ -1,4 +1,4 @@
-## 👋 Hey, i'm <strong>Abner</strong>
+## 👋 Hey, i'm <strong>Abner</strong> <br/> Fullstack developer, Illustrator, Writer, Systems and UI builder...
 
 #### Tech Stack & Tools 
 
