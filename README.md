@@ -3,7 +3,7 @@
 <div> <h3>Stacks and Tools</h3> </div>
 
 <p>
-<img src="https://skillicons.dev/icons?i=bash,linux,docker,nodejs,express,nextjs,prisma,php,laravel,spring,react,go,figma,blender" />
+<img src="https://skillicons.dev/icons?i=cpp,bash,linux,go,docker,nodejs,express,nextjs,prisma,php,laravel,java,spring,react,figma,blender" />
 </p>
 
 
