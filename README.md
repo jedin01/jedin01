@@ -1,12 +1,39 @@
 ## 👋 Hey, i'm <strong>Abner</strong> <br/>
 
-#### Tech Stack & Tools 
+<table align="center"><tr><td valign="top" width="30%">
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=cpp,linux,bash,go,docker,java,kotlin,spring,nodejs,typescript,next,php,laravel,mysql,postgres,blender,figma" />
-  </a>
+### <div align="center"> Frontend </div>
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=js,html,css,ts,react,nextjs,tailwind, bootstrap&theme=dark&perline=4" />
 </p>
+
+</td><td valign="top" width="30%">
+
+### <div align="center"> Backend </div>
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=nodejs,express,nestjs,prisma,laravel, spring,go,java&theme=dark&perline=4" />
+</p>
+
+</td><td valign="top" width="20%">
+
+### <div align="center"> Databases </div>
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=mysql,postgres,firebase,redis&theme=dark&perline=2" />
+</p>
+
+</td><td valign="top" width="20%">
+
+### <div align="center"> Tools </div>
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=figma,xd,docker,linux,vscode,git,github,bitbucket,azure,gitlab,bash,powershell,notion&theme=dark&perline=3" />
+</p>
+
+</td></tr></table>
+
 
 
 #### Support My Work
