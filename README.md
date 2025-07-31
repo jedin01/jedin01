@@ -1,6 +1,6 @@
 ## 👋 Hey, i'm <strong>Abner</strong> <br/>
 
-<div> Stacks and Tools </div>
+<div> <h3>Stacks and Tools</h3> </div>
 
 <p>
 <img src="https://skillicons.dev/icons?i=bash,linux,docker,nodejs,express,nextjs,prisma,php,laravel,spring,react,go,figma,blender" />
