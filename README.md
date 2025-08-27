@@ -1,13 +1,10 @@
 ## 👋 Hey, i'm <strong>Abner</strong> <br/>
 
-#### Tech Stack & Tools 
+#### Stacks and Tools
 
-<p align="left">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=c++,linux,bash,go,docker,java,kotlin,spring,nodejs,typescript,next,php,laravel,blender,figma" />
-  </a>
+<p>
+<img src="https://skillicons.dev/icons?i=cpp,bash,linux,go,docker,nodejs,typescript,express,nextjs,prisma,php,laravel,java,spring,react,figma,blender" />
 </p>
-
 
 #### Support My Work
 
@@ -20,3 +17,4 @@ If you enjoy what I do or want to encourage me to keep building, consider buying
 </p>
 
 > Any support is greatly appreciated! 🙏
+
