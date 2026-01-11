@@ -1,4 +1,4 @@
-## 👋 Yo, i'm <strong>Abner</strong> <br/>[![committers.top badge](https://user-badge.committers.top/angola/jedin01.svg)](https://user-badge.committers.top/angola/jedin01)<br/>
+## 👋 Yo, i'm <strong>Abner</strong> <br/> <br/> [![committers.top badge](https://user-badge.committers.top/angola/jedin01.svg)](https://user-badge.committers.top/angola/jedin01)<br/>
 
 #### Techs and Tools
 
