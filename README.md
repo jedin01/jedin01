@@ -1,10 +1,12 @@
-## 👋 Hey, i'm <strong>Abner</strong> <br/>
+## 👋 Yo, i'm <strong>Abner</strong> <br/>
 
 #### Techs and Tools
 
 <p>
 <img src="https://skillicons.dev/icons?i=linux,go,docker,nextjs,threejs,laravel,nestjs,java,kotlin,spring,figma,blender" />
 </p>
+
+[![committers.top badge](https://user-badge.committers.top/angola/jedin01.svg)](https://user-badge.committers.top/angola/jedin01)
 
 #### Support My Work
 
