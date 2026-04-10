@@ -3,7 +3,7 @@
 #### Techs and Tools
 
 <p>
-<img src="https://skillicons.dev/icons?i=linux,go,docker,nextjs,threejs,laravel,nestjs,java,kotlin,spring,figma,blender" />
+<img src="https://skillicons.dev/icons?i=figma,linux,docker,java,kotlin,spring,rust,go,php,laravel" />
 </p>
 
 #### Support My Work
