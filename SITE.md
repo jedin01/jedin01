@@ -41,7 +41,8 @@ bundle exec jekyll serve --baseurl /jedin01
 `.github/workflows/pages.yml` builds the site with the Jekyll version pinned in
 `Gemfile.lock` and deploys it. In *Settings → Pages → Build and deployment*, the source
 must be **GitHub Actions**. The workflow runs on every push to `main` and can be started
-by hand from the *Actions* tab. The site is published at https://jedin01.github.io/jedin01/.
+by hand from the *Actions* tab. The site is published at http://sudoje.me/jedin01/ (the account's custom domain;
+jedin01.github.io redirects there).
 
 ## Notes
 

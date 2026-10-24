@@ -30,7 +30,7 @@
   {%- if page.url == "/" %}
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "{{ site.author.name }}", "jobTitle": "Backend Software Engineer",
-    "url": "{{ site.url }}", "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
+    "url": "{{ '/' | absolute_url }}", "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
     "sameAs": ["{{ site.author.linkedin }}", "{{ site.author.github }}"]}
   </script>
   {%- endif %}
