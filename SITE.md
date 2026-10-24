@@ -1,8 +1,8 @@
 # Abner Lourenço · portfolio
 
 Personal portfolio of Abner Lourenço, backend software engineer working with Camunda 8,
-Zeebe, BPMN and DMN, Java and Spring Boot. Built with Jekyll, which GitHub Pages runs on
-every push. `README.md` stays as the GitHub profile README and is not part of the site.
+Zeebe, BPMN and DMN, Java and Spring Boot. Built with Jekyll; a GitHub Actions workflow builds and
+publishes it on every push to `main`. `README.md` stays as the GitHub profile README and is not part of the site.
 
 ## Structure
 
@@ -31,15 +31,17 @@ Upload the image to `assets/gallery/` and add an entry to `_data/gallery.yml`
 ## Run locally
 
 ```sh
-gem install jekyll
-jekyll serve --baseurl /jedin01
+bundle install
+bundle exec jekyll serve --baseurl /jedin01
 # open http://localhost:4000/jedin01/
 ```
 
 ## Publishing (GitHub Pages)
 
-In *Settings → Pages → Build and deployment*, choose **Deploy from a branch**, branch
-`main`, folder `/ (root)`. The site is published at https://jedin01.github.io/jedin01/.
+`.github/workflows/pages.yml` builds the site with the Jekyll version pinned in
+`Gemfile.lock` and deploys it. In *Settings → Pages → Build and deployment*, the source
+must be **GitHub Actions**. The workflow runs on every push to `main` and can be started
+by hand from the *Actions* tab. The site is published at https://jedin01.github.io/jedin01/.
 
 ## Notes
 
