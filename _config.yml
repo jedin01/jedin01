@@ -2,7 +2,8 @@ title: Abner Lourenço
 description: >-
   Backend software engineer in Luanda. I orchestrate critical banking processes
   with Camunda 8 and Zeebe, and write the Java and Spring Boot workers behind them.
-url: "https://jedin01.github.io"
+# Domínio próprio da conta; no deploy o workflow usa o endereço que o GitHub Pages indica
+url: "http://sudoje.me"
 baseurl: "/jedin01"
 timezone: Africa/Luanda
 lang: en
