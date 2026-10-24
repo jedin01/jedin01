@@ -1,0 +1,30 @@
+---
+title: Articles
+nav: articles
+description: Articles by Abner Lourenço on Camunda 8, Zeebe, BPMN, Java and building software in Angola.
+---
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Articles</p>
+        <h1 class="display-xl" id="page-title">Notes from the engine room.</h1>
+        <p class="body-l">What I learn about Camunda 8, Zeebe, BPMN and Java, and about building software for Angola. Some articles are in Portuguese.</p>
+        <div class="hero-actions">
+          <a class="btn btn--ghost" href="{{ site.author.newsletter }}" rel="noopener">Newsletter on LinkedIn{% include arrow.html %}</a>
+          <a class="btn btn--link" href="{{ '/feed.xml' | relative_url }}">RSS feed</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sunken" aria-label="All articles">
+      <div class="container">
+        {%- if site.posts.size > 0 %}
+        <div class="articles articles--list">
+          {%- for post in site.posts %}
+          {% include article-card.html post=post %}
+          {%- endfor %}
+        </div>
+        {%- else %}
+        <p class="empty">No articles yet.</p>
+        {%- endif %}
+      </div>
+    </section>

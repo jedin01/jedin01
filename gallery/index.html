@@ -1,0 +1,53 @@
+---
+title: Gallery
+nav: gallery
+description: Photos from talks, hackathons, classes and the work behind the code.
+---
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Gallery</p>
+        <h1 class="display-xl" id="page-title">Behind the code.</h1>
+        <p class="body-l">Talks, hackathons, classes and the people I build with.</p>
+      </div>
+    </section>
+
+    <section class="section section--sunken" aria-label="Photos">
+      <div class="container">
+        {%- if site.data.gallery.size > 0 %}
+        <ul class="gallery" data-gallery>
+          {%- for photo in site.data.gallery %}
+          <li class="gallery-item reveal">
+            <button type="button" class="gallery-open" data-full="{{ photo.src | relative_url }}" data-caption="{{ photo.caption | escape }}" aria-label="Open photo: {{ photo.caption | default: photo.alt | escape }}">
+              <img src="{{ photo.src | relative_url }}" alt="{{ photo.alt | escape }}" loading="lazy">
+            </button>
+            {%- if photo.caption %}
+            <p class="gallery-caption">{{ photo.caption }}</p>
+            {%- endif %}
+          </li>
+          {%- endfor %}
+        </ul>
+
+        <dialog class="lightbox" aria-label="Photo">
+          <figure>
+            <img src="" alt="">
+            <figcaption></figcaption>
+          </figure>
+          <div class="lightbox-bar">
+            <button type="button" class="icon-btn" data-lightbox="prev" aria-label="Previous photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button type="button" class="icon-btn" data-lightbox="next" aria-label="Next photo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+            <button type="button" class="icon-btn" data-lightbox="close" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+          </div>
+        </dialog>
+        {%- else %}
+        <div class="empty reveal">
+          <span class="empty-ring" aria-hidden="true"></span>
+          <h2>Photos are on their way.</h2>
+          <p class="muted">This gallery is being put together. In the meantime, the articles and projects are a good place to start.</p>
+          <div class="hero-actions">
+            <a class="btn" href="{{ '/articles/' | relative_url }}">Read the articles{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="{{ '/work/' | relative_url }}">See the projects</a>
+          </div>
+        </div>
+        {%- endif %}
+      </div>
+    </section>

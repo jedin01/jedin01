@@ -1,0 +1,76 @@
+<!-- Processo BPMN 2.0 (abertura de conta) com notação do Camunda Modeler.
+     Um token de instância percorre o caminho principal, como no Operate. -->
+<svg class="bpmn" viewBox="0 0 660 380" role="img" aria-labelledby="bpmn-title">
+  <title id="bpmn-title">BPMN 2.0 diagram of a customer onboarding process: application received, review application with a 48 hour timer, approved gateway, open account in core banking or notify customer.</title>
+  <defs>
+    <marker id="bpmn-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" class="bpmn-arrowhead"/>
+    </marker>
+  </defs>
+
+  <!-- Pool e lane -->
+  <rect class="bpmn-pool" x="8" y="8" width="644" height="364" rx="4"/>
+  <path class="bpmn-pool-line" d="M40 8 V372"/>
+  <text class="bpmn-pool-label" transform="translate(28 190) rotate(-90)">Bank · Customer onboarding</text>
+
+  <!-- Fluxos de sequência -->
+  <g class="bpmn-flows" marker-end="url(#bpmn-arrow)">
+    <path d="M108 150 H140"/>
+    <path d="M250 150 H270"/>
+    <path d="M320 150 H360"/>
+    <path d="M480 150 H532"/>
+    <path d="M295 175 V290 H360"/>
+    <path d="M480 290 H532"/>
+    <path d="M195 204 V352 H420 V330"/>
+  </g>
+  <text class="bpmn-label bpmn-label--flow" x="340" y="142">Yes</text>
+  <text class="bpmn-label bpmn-label--flow" x="303" y="232" text-anchor="start">No</text>
+
+  <!-- Evento de início por mensagem -->
+  <circle class="bpmn-shape" cx="90" cy="150" r="18"/>
+  <rect class="bpmn-mark" x="80" y="144" width="20" height="13" rx="1"/>
+  <path class="bpmn-mark" d="M80 144 L90 151 L100 144"/>
+  <text class="bpmn-label" x="90" y="186"><tspan x="90">Application</tspan><tspan x="90" dy="13">received</tspan></text>
+
+  <!-- User task -->
+  <rect class="bpmn-shape bpmn-task" x="140" y="110" width="110" height="80" rx="10"/>
+  <circle class="bpmn-mark" cx="155" cy="121" r="4"/>
+  <path class="bpmn-mark" d="M148 132 C149 126 161 126 162 132"/>
+  <text class="bpmn-label" x="195" y="149"><tspan x="195">Review</tspan><tspan x="195" dy="14">application</tspan></text>
+
+  <!-- Evento de temporizador de fronteira (SLA) -->
+  <circle class="bpmn-shape" cx="195" cy="190" r="14"/>
+  <circle class="bpmn-mark" cx="195" cy="190" r="11"/>
+  <circle class="bpmn-mark" cx="195" cy="190" r="7"/>
+  <path class="bpmn-mark" d="M195 185 V190 L198.5 192"/>
+  <text class="bpmn-label" x="214" y="216" text-anchor="start">48 h</text>
+
+  <!-- Gateway exclusivo -->
+  <path class="bpmn-shape" d="M295 125 L320 150 L295 175 L270 150 z"/>
+  <path class="bpmn-mark bpmn-mark--bold" d="M287 142 L303 158 M303 142 L287 158"/>
+  <text class="bpmn-label" x="295" y="114">Approved?</text>
+
+  <!-- Service task -->
+  <rect class="bpmn-shape bpmn-task" x="360" y="110" width="120" height="80" rx="10"/>
+  <circle class="bpmn-mark" cx="375" cy="123" r="4.5"/>
+  <path class="bpmn-mark" d="M375 115.5 V117.5 M375 128.5 V130.5 M367.5 123 H369.5 M380.5 123 H382.5 M369.7 117.7 L371.1 119.1 M378.9 126.9 L380.3 128.3 M369.7 128.3 L371.1 126.9 M378.9 119.1 L380.3 117.7"/>
+  <text class="bpmn-label" x="420" y="149"><tspan x="420">Open account</tspan><tspan x="420" dy="14">in core banking</tspan></text>
+
+  <!-- Send task -->
+  <rect class="bpmn-shape bpmn-task" x="360" y="250" width="120" height="80" rx="10"/>
+  <rect class="bpmn-mark-fill" x="367" y="257" width="17" height="12" rx="1"/>
+  <path class="bpmn-mark-inv" d="M367 257 L375.5 264 L384 257"/>
+  <text class="bpmn-label" x="420" y="289"><tspan x="420">Notify</tspan><tspan x="420" dy="14">customer</tspan></text>
+
+  <!-- Eventos de fim -->
+  <circle class="bpmn-shape bpmn-end" cx="550" cy="150" r="18"/>
+  <text class="bpmn-label" x="550" y="186"><tspan x="550">Account</tspan><tspan x="550" dy="13">opened</tspan></text>
+  <circle class="bpmn-shape bpmn-end" cx="550" cy="290" r="18"/>
+  <text class="bpmn-label" x="550" y="326">Rejected</text>
+
+  <!-- Token da instância: pára em cada tarefa, como uma instância real -->
+  <circle class="bpmn-token" r="8" cx="0" cy="0">
+    <animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" path="M90 150 H550"
+      keyTimes="0;0.1;0.3;0.38;0.46;0.56;0.78;0.9;1" keyPoints="0;0.228;0.228;0.446;0.446;0.717;0.717;1;1"/>
+  </circle>
+</svg>

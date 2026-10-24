@@ -1,0 +1,11 @@
+# Fotos da galeria (/gallery/). Para adicionar uma foto:
+#   1. envie a imagem para assets/gallery/ (JPG ou WebP, idealmente até 1600 px de largura);
+#   2. acrescente uma entrada aqui, com o caminho, a legenda e o texto alternativo.
+# A página /write/ ajuda nos dois passos.
+#
+# Exemplo:
+# - src: /assets/gallery/2026-09-hackathon.jpg
+#   caption: Hackathon at ITEL, September 2026
+#   alt: Abner presenting a BPMN diagram to a room of students
+#
+# Cole as novas entradas por baixo desta linha.

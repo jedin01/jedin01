@@ -1,0 +1,47 @@
+---
+layout: default
+nav: articles
+---
+{%- assign words = content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+    <article class="post" {% if page.lang %}lang="{{ page.lang }}"{% endif %}>
+      <header class="post-head">
+        <div class="container container--prose">
+          <a class="post-back" href="{{ '/articles/' | relative_url }}"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 8H3M7 4L3 8l4 4"/></svg>All articles</a>
+          <p class="article-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · {{ minutes }} min read</p>
+          <h1 class="display-l">{{ page.title }}</h1>
+          {%- if page.description %}
+          <p class="body-l post-lead">{{ page.description }}</p>
+          {%- endif %}
+          {%- if page.tags.size > 0 %}
+          <ul class="tags tags--plain">{% for t in page.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+          {%- endif %}
+        </div>
+      </header>
+
+      {%- if page.image %}
+      <figure class="post-cover container container--wide">
+        <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: '' }}">
+      </figure>
+      {%- endif %}
+
+      <div class="container container--prose">
+        <div class="prose">
+{{ content }}
+        </div>
+
+        <footer class="post-foot">
+          {%- if page.original %}
+          <p class="muted">{% if page.lang == 'pt' %}Publicado originalmente no{% else %}Originally published on{% endif %} <a href="{{ page.original }}" rel="noopener">LinkedIn</a>.</p>
+          {%- endif %}
+          <nav class="post-nav" aria-label="More articles">
+            {%- if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}"><span class="eyebrow">Previous</span>{{ page.previous.title }}</a>
+            {%- endif %}
+            {%- if page.next %}
+            <a class="post-nav-next" href="{{ page.next.url | relative_url }}"><span class="eyebrow">Next</span>{{ page.next.title }}</a>
+            {%- endif %}
+          </nav>
+        </footer>
+      </div>
+    </article>

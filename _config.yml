@@ -1,0 +1,42 @@
+title: Abner Lourenço
+description: >-
+  Backend software engineer in Luanda. I orchestrate critical banking processes
+  with Camunda 8 and Zeebe, and write the Java and Spring Boot workers behind them.
+url: "https://jedin01.github.io"
+baseurl: "/jedin01"
+timezone: Africa/Luanda
+lang: en
+
+author:
+  name: Abner Lourenço
+  linkedin: https://www.linkedin.com/in/abnerlouren
+  github: https://github.com/jedin01
+  newsletter: https://www.linkedin.com/newsletters/inside-the-history-camunda-7503854342068842496/
+
+# Repositório usado pela página /write/ para criar artigos e enviar fotos
+repository: jedin01/jedin01
+branch: main
+
+permalink: /articles/:title/
+markdown: kramdown
+kramdown:
+  input: GFM
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - SITE.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

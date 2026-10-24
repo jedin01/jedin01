@@ -1,0 +1,85 @@
+---
+title: Work
+nav: work
+description: Experience, projects and how I work, from public sector web apps to process automation for Angolan banks.
+---
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Work</p>
+        <h1 class="display-xl" id="page-title">Processes in production, and the code behind them.</h1>
+        <p class="body-l">Experience, selected projects and the way I approach systems that can't afford to fail.</p>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section--sunken" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Experience</p>
+          <h2 class="display-l" id="experience-title">Where I've been building.</h2>
+          <p class="body-l">From public sector web apps to process automation for Angolan banks.</p>
+        </div>
+        <ol class="steps">
+          {%- for e in site.data.experience %}
+          <li class="step tone-{{ e.tone }} reveal">
+            <span class="step-num" aria-hidden="true"></span>
+            <p class="step-date">{{ e.dates }}</p>
+            <h3>{{ e.role }}</h3>
+            <p class="step-org">{{ e.org }}</p>
+            <p>{{ e.summary }}</p>
+          </li>
+          {%- endfor %}
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projects</p>
+          <h2 class="display-l" id="projects-title">Things I've built and shipped.</h2>
+          <p class="body-l">Production work, open source and side projects, most of them around processes, Java and the realities of Angola.</p>
+        </div>
+        <div class="projects">
+          {%- for p in site.data.projects %}
+          {% include project-card.html project=p %}
+          {%- endfor %}
+        </div>
+        <p class="projects-more reveal">More on GitHub, including <a href="https://github.com/jedin01/reductio" rel="noopener">Reductio</a>, a Java library for parsing and simplifying math expressions, and <a href="https://github.com/jedin01/licita" rel="noopener">Licita</a>, a concept for public procurement in Angola. <a href="{{ site.author.github }}" rel="noopener">github.com/jedin01</a></p>
+      </div>
+    </section>
+
+    <!-- ============ HOW I WORK ============ -->
+    <section class="section section--sunken" aria-labelledby="how-title">
+      <div class="container why">
+        <div class="why-intro reveal">
+          <p class="eyebrow">How I work</p>
+          <h2 class="display-l" id="how-title">Engineering for processes that can't fail.</h2>
+          <p class="body-l">Banking processes run every day, with real customers and real money behind them. I design them so that every step is visible, auditable and safe to retry.</p>
+        </div>
+
+        <div class="why-cards">
+          <article class="why-card tone-blue reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8" cy="9" r="3"/><circle cx="16.5" cy="9" r="3"/><path d="M2.5 19c.6-3 2.8-4.5 5.5-4.5s4.9 1.5 5.5 4.5M12.5 15.2c1-.5 2.4-.7 4-.7 2.7 0 4.9 1.5 5 4.5"/></svg></span>
+            <h3>Close to the business</h3>
+            <p>I gather requirements with business and operations teams and turn their rules into DMN tables they can read.</p>
+          </article>
+          <article class="why-card tone-teal reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11a8 8 0 1 1-2.3-5.6"/><path d="M20 4v5h-5"/></svg></span>
+            <h3>Safe to retry</h3>
+            <p>Idempotent writes and explicit error handling, so a retried job never leaves an inconsistent record behind.</p>
+          </article>
+          <article class="why-card tone-green reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5A1.5 1.5 0 0 1 5.5 4H11v16H5.5A1.5 1.5 0 0 1 4 18.5z"/><path d="M20 5.5A1.5 1.5 0 0 0 18.5 4H13v16h5.5a1.5 1.5 0 0 0 1.5-1.5z"/></svg></span>
+            <h3>Readable on Monday</h3>
+            <p>Teaching made me write code, processes and documentation that someone else can pick up without me in the room.</p>
+          </article>
+          <article class="why-card tone-sunny reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9s1.2-6.4 3.7-9z"/></svg></span>
+            <h3>Remote-ready</h3>
+            <p>Based in Luanda, on the same working hours as most of Europe, and comfortable working async in English.</p>
+          </article>
+        </div>
+      </div>
+    </section>

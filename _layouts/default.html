@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang }}" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- if page.url == "/" -%}
+  {%- assign page_title = site.title | append: " · Backend Software Engineer" -%}
+  {%- else -%}
+  {%- assign page_title = page.title | append: " · " | append: site.title -%}
+  {%- endif %}
+  <title>{{ page_title }}</title>
+  <meta name="description" content="{{ page.description | default: page.excerpt | default: site.description | strip_html | strip_newlines | truncate: 160 }}">
+  <meta name="theme-color" content="#FFFFFF">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  {%- if page.image %}
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  {%- endif %}
+  {%- if page.noindex %}
+  <meta name="robots" content="noindex">
+  {%- endif %}
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.title }} · Articles" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  {%- if page.url == "/" %}
+  <script type="application/ld+json">
+  {"@context": "https://schema.org", "@type": "Person", "name": "{{ site.author.name }}", "jobTitle": "Backend Software Engineer",
+    "url": "{{ site.url }}", "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
+    "sameAs": ["{{ site.author.linkedin }}", "{{ site.author.github }}"]}
+  </script>
+  {%- endif %}
+  <script>document.documentElement.classList.remove('no-js');</script>
+</head>
+<body class="page-{{ page.nav | default: 'none' }}">
+  <a class="skip-link" href="#conteudo">Skip to content</a>
+
+  <header class="site-header" id="topo">
+    <div class="container">
+      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }}, home"><span class="wordmark">abner<span class="wordmark-dot" aria-hidden="true"></span></span></a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="{{ '/work/' | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Work</a>
+        <a href="{{ '/articles/' | relative_url }}"{% if page.nav == 'articles' %} aria-current="page"{% endif %}>Articles</a>
+        <a href="{{ '/gallery/' | relative_url }}"{% if page.nav == 'gallery' %} aria-current="page"{% endif %}>Gallery</a>
+        <a href="{{ '/about/' | relative_url }}"{% if page.nav == 'about' %} aria-current="page"{% endif %}>About</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn" href="#contact">Get in touch</a>
+        <button class="icon-btn menu-toggle" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="conteudo">
+{{ content }}
+{%- unless page.hide_contact %}
+{% include contact.html %}
+{%- endunless %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="wordmark wordmark--lg">abner<span class="wordmark-dot" aria-hidden="true"></span></span>
+          <p class="footer-sign">Backend Software Engineer · Luanda, Angola</p>
+        </div>
+        <div>
+          <h2>Pages</h2>
+          <ul>
+            <li><a href="{{ '/work/' | relative_url }}">Work</a></li>
+            <li><a href="{{ '/articles/' | relative_url }}">Articles</a></li>
+            <li><a href="{{ '/gallery/' | relative_url }}">Gallery</a></li>
+            <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Writing</h2>
+          <ul>
+            <li><a href="{{ '/articles/' | relative_url }}">All articles</a></li>
+            <li><a href="{{ site.author.newsletter }}" rel="noopener">Newsletter</a></li>
+            <li><a href="{{ '/feed.xml' | relative_url }}">RSS feed</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Elsewhere</h2>
+          <ul>
+            <li><a href="{{ site.author.linkedin }}" rel="noopener">LinkedIn</a></li>
+            <li><a href="{{ site.author.github }}" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.buymeacoffee.com/abnerjaredh" rel="noopener">Buy me a coffee</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span data-year>{{ site.time | date: "%Y" }}</span> {{ site.author.name }}.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  {%- for s in page.scripts %}
+  <script src="{% if s contains '://' %}{{ s }}{% else %}{{ s | relative_url }}{% endif %}" defer></script>
+  {%- endfor %}
+</body>
+</html>
