@@ -1,0 +1,24 @@
+# Linha temporal em /work/, da mais antiga para a mais recente.
+- dates: Sep 2024 – Dec 2024
+  role: Software Developer, intern
+  org: ITEL
+  tone: sunny
+  summary: Web apps for the Ministry of Telecommunications (MINTTICS) and academic management platforms in PHP and Laravel.
+
+- dates: Dec 2024 – Mar 2026
+  role: Software Developer
+  org: ITEL · part-time
+  tone: green
+  summary: Led onboarding and code review for junior developers and hardened Laravel REST APIs.
+
+- dates: Oct 2025 – Apr 2026
+  role: Data Modeling Lecturer
+  org: ITEL · part-time
+  tone: teal
+  summary: Taught 120+ students across 3 classes, from requirements to a working database schema.
+
+- dates: Mar 2026 – now
+  role: Backend Software Engineer
+  org: Selenium Digital Solutions
+  tone: blue
+  summary: Joined as an intern, hired in May 2026. Customer onboarding, core banking integrations and a fully automated dormant-account batch on Camunda 8.

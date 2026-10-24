@@ -1,0 +1,62 @@
+# Projetos mostrados em /work/ (todos) e na página inicial (featured: true).
+# tone: blue, teal, green ou sunny.
+- title: Zeebe gateway rate limiter
+  type: Open source · Camunda 8
+  tone: blue
+  featured: true
+  description: >-
+    A dual-layer rate limiter for a self-managed Zeebe Gateway: a gRPC interceptor for
+    <code>CreateProcessInstance</code> and a Jakarta REST filter, both keyed on the JWT <code>sub</code> claim.
+  tags: [Java, gRPC, Zeebe, Docker]
+  link: https://github.com/jedin01/camunda-rate-limit-zeebe-interceptor
+  link_label: View code
+
+- title: Default BPMN linting in VS Code
+  type: Open source contribution
+  tone: teal
+  featured: true
+  description: >-
+    Opened issue #1320 and PR #1321 on Miragon's BPMN Modeler. The discussion led to
+    platform-aware linting (Camunda 7 or 8) turned on by default in v1.8.0.
+  tags: [BPMN, VS Code, TypeScript]
+  link: /articles/bpmn-and-git/
+  link_label: Read the article
+
+- title: Expense reimbursement orchestrator
+  type: Process automation
+  tone: green
+  featured: true
+  description: >-
+    An end-to-end reimbursement flow: REST request, automatic validation, manager approval
+    in Tasklist, PDF generation, an RPA bot and a confirmation email.
+  tags: [Camunda 8, Spring Boot, RPA, SendGrid]
+  link: https://github.com/jedin01/expense-reimbursement
+  link_label: View code
+
+- title: BankOps
+  type: In progress
+  tone: sunny
+  description: >-
+    Turning banking services that usually need a branch visit, such as customer onboarding
+    and credit applications, into executable and auditable BPMN workflows.
+  tags: [Java, Spring Boot, Camunda 8, BPMN]
+
+- title: Kixi
+  type: Edtech · co-built
+  tone: blue
+  description: >-
+    A platform built by students for students: past exams become simulated tests with
+    instant feedback and an AI study assistant, so preparing for exams in Angola is fairer.
+  tags: [Spring, Next.js, AI]
+  link: https://kixi.creativemode.ao
+  link_label: Visit Kixi
+
+- title: Luanda taxi routes
+  type: Side project
+  tone: teal
+  description: >-
+    A graph of Luanda's informal taxi stops and routes, with distance, price and time, and a
+    route planner that tells you which taxis to take and how much the trip costs.
+  tags: [Graphs, REST API, Maps]
+  link: /articles/candongas-de-luanda/
+  link_label: Read the article

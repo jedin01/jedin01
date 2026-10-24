@@ -1,0 +1,11 @@
+{%- assign p = include.project -%}
+<article class="project tone-{{ p.tone }} reveal">
+  <p class="project-type">{{ p.type }}</p>
+  <h3>{{ p.title }}</h3>
+  <p>{{ p.description }}</p>
+  <ul class="tags">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+  {%- if p.link %}
+  {%- assign is_external = p.link | slice: 0, 4 %}
+  <a class="btn btn--link" href="{% if is_external == 'http' %}{{ p.link }}{% else %}{{ p.link | relative_url }}{% endif %}"{% if is_external == 'http' %} rel="noopener"{% endif %}>{{ p.link_label }}{% include arrow.html %}</a>
+  {%- endif %}
+</article>

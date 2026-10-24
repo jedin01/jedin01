@@ -1,0 +1,19 @@
+---
+title: Page not found
+permalink: /404.html
+noindex: true
+hide_contact: true
+---
+    <section class="notfound" aria-labelledby="page-title">
+      <div class="container">
+        <div class="notfound-copy">
+          <p class="eyebrow">Error 404</p>
+          <h1 class="display-xl" id="page-title">This path isn't in the process.</h1>
+          <p class="body-l muted">The page you are looking for doesn't exist or has moved.</p>
+          <div class="hero-actions">
+            <a class="btn" href="{{ '/' | relative_url }}">Back to the homepage{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="{{ '/articles/' | relative_url }}">Read the articles</a>
+          </div>
+        </div>
+      </div>
+    </section>

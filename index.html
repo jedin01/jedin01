@@ -1,0 +1,132 @@
+---
+title: Home
+nav: home
+---
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">Backend Software Engineer&nbsp;· Camunda&nbsp;8&nbsp;· Java&nbsp;&amp; Spring Boot</p>
+          <h1 class="display-xl" id="hero-title">I build the processes that keep a bank running.</h1>
+          <p class="body-l">I orchestrate critical banking operations with Camunda 8 and Zeebe, from BPMN and DMN models to the Java and Spring Boot workers behind each step. Based in Luanda, open to remote work.</p>
+          <div class="hero-actions">
+            <a class="btn" href="{{ '/work/' | relative_url }}">See my work{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-art" data-parallax="0.06">
+          {% include bpmn.html %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I DO ============ -->
+    <section class="section section--sunken" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">What I do</p>
+          <h2 class="display-l" id="work-title">From the whiteboard to production.</h2>
+          <p class="body-l">I work across the whole cycle of a business process: understanding it with the people who own it, modeling it, writing the code behind it and keeping it running.</p>
+        </div>
+
+        <div class="fronts">
+          <article class="front tone-blue reveal">
+            <div class="front-icon"><span class="ring" style="--c:var(--brand-blue)"></span><span class="dot" style="--c:var(--brand-bubble)"></span></div>
+            <h3>Process orchestration</h3>
+            <p class="muted">Executable processes on Camunda 8 and Zeebe.</p>
+            <ul>
+              <li>BPMN 2.0 models with timers, error events and user tasks</li>
+              <li>DMN decision tables for business rules</li>
+              <li>FEEL expressions for mappings and conditions</li>
+            </ul>
+          </article>
+
+          <article class="front tone-teal reveal">
+            <div class="front-icon"><span class="ring" style="--c:var(--brand-teal)"></span><span class="dot" style="--c:var(--brand-blue)"></span></div>
+            <h3>Backend &amp; integrations</h3>
+            <p class="muted">The Java code behind each process step.</p>
+            <ul>
+              <li>Spring Boot job workers</li>
+              <li>Core banking and middleware integrations</li>
+              <li>REST and SQL connectors, idempotent writes</li>
+            </ul>
+          </article>
+
+          <article class="front tone-green reveal">
+            <div class="front-icon"><span class="ring" style="--c:var(--brand-green)"></span><span class="dot" style="--c:var(--brand-teal)"></span></div>
+            <h3>Platform &amp; operations</h3>
+            <p class="muted">Self-managed environments that stay up.</p>
+            <ul>
+              <li>Camunda 8 with Keycloak OIDC</li>
+              <li>Docker, Podman and Linux</li>
+              <li>Incident handling in Operate and Tasklist</li>
+            </ul>
+          </article>
+
+          <article class="front tone-sunny reveal">
+            <div class="front-icon"><span class="ring" style="--c:var(--brand-sunny)"></span><span class="dot" style="--c:var(--brand-blue)"></span></div>
+            <h3>Data modeling</h3>
+            <p class="muted">Schemas that match the business.</p>
+            <ul>
+              <li>Conceptual, logical and physical models</li>
+              <li>Normalization, keys and constraints</li>
+              <li>PostgreSQL, MSSQL and MySQL</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURED WORK ============ -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <div class="section-row reveal">
+          <div class="section-head">
+            <p class="eyebrow">Selected work</p>
+            <h2 class="display-l" id="featured-title">Things I've built and shipped.</h2>
+          </div>
+          <a class="btn btn--ghost" href="{{ '/work/' | relative_url }}">All projects and experience{% include arrow.html %}</a>
+        </div>
+        <div class="projects">
+          {%- assign featured = site.data.projects | where: "featured", true %}
+          {%- for p in featured %}
+          {% include project-card.html project=p %}
+          {%- endfor %}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MEET ME ============ -->
+    <section class="section section--sunken" aria-labelledby="meet-title">
+      <div class="container about">
+        <div class="about-copy reveal">
+          <p class="eyebrow">Hi, I'm Abner</p>
+          <h2 class="display-l" id="meet-title">Curious about what runs behind the scenes.</h2>
+          <p class="body-l">I enjoy the parts most people skip: extending a gateway, running Keycloak and Docker in our own environments, reading the engine docs until the why makes sense. Before Camunda I shipped PHP, Laravel and Next.js systems and taught data modeling.</p>
+          <div class="hero-actions">
+            <a class="btn" href="{{ '/about/' | relative_url }}">More about me{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="{{ '/gallery/' | relative_url }}">See the gallery</a>
+          </div>
+        </div>
+{% include mascot.html %}
+      </div>
+    </section>
+
+    <!-- ============ LATEST ARTICLES ============ -->
+    <section class="section" aria-labelledby="latest-title">
+      <div class="container">
+        <div class="section-row reveal">
+          <div class="section-head">
+            <p class="eyebrow">Writing</p>
+            <h2 class="display-l" id="latest-title">Notes from the engine room.</h2>
+          </div>
+          <a class="btn btn--ghost" href="{{ '/articles/' | relative_url }}">All articles{% include arrow.html %}</a>
+        </div>
+        <div class="articles">
+          {%- for post in site.posts limit: 3 %}
+          {% include article-card.html post=post %}
+          {%- endfor %}
+        </div>
+      </div>
+    </section>

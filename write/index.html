@@ -1,0 +1,112 @@
+---
+title: Write
+nav: write
+noindex: true
+hide_contact: true
+description: Write and publish an article, or add a photo to the gallery.
+scripts:
+  - https://cdn.jsdelivr.net/npm/marked@12.0.2/marked.min.js
+  - /assets/js/write.js
+---
+    <section class="page-hero page-hero--tight" aria-labelledby="page-title">
+      <div class="container">
+        <p class="eyebrow">Write</p>
+        <h1 class="display-l" id="page-title">Publish an article or a photo.</h1>
+        <p class="body-l">Everything here is saved on GitHub, in <a href="https://github.com/{{ site.repository }}" rel="noopener">{{ site.repository }}</a>. You need to be signed in to GitHub with write access; the site updates about a minute after you commit.</p>
+        <div class="tabs" role="tablist" aria-label="What to publish">
+          <button type="button" role="tab" id="tab-article" aria-controls="panel-article" aria-selected="true">Article</button>
+          <button type="button" role="tab" id="tab-photo" aria-controls="panel-photo" aria-selected="false">Photo</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--sunken section--tight">
+      <div class="container" id="write-app" data-repo="{{ site.repository }}" data-branch="{{ site.branch }}">
+
+        <!-- ============ ARTIGO ============ -->
+        <div class="editor" id="panel-article" role="tabpanel" aria-labelledby="tab-article">
+          <form class="editor-form" id="article-form" novalidate>
+            <div class="field">
+              <label for="a-title">Title</label>
+              <input id="a-title" name="title" type="text" required placeholder="What is Camunda and how does it work?">
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="a-date">Date</label>
+                <input id="a-date" name="date" type="date" required>
+              </div>
+              <div class="field">
+                <label for="a-lang">Language</label>
+                <select id="a-lang" name="lang">
+                  <option value="en">English</option>
+                  <option value="pt">Português</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="a-desc">Summary <span class="muted">· one or two sentences for the article list</span></label>
+              <textarea id="a-desc" name="description" rows="2"></textarea>
+            </div>
+            <div class="field">
+              <label for="a-tags">Tags <span class="muted">· separated by commas</span></label>
+              <input id="a-tags" name="tags" type="text" placeholder="Camunda 8, Zeebe, Java">
+            </div>
+            <div class="field">
+              <label for="a-image">Cover image <span class="muted">· optional, a path such as /assets/gallery/cover.jpg</span></label>
+              <input id="a-image" name="image" type="text">
+            </div>
+            <div class="field">
+              <label for="a-body">Text <span class="muted">· Markdown: ## for headings, **bold**, - lists, [links](https://…)</span></label>
+              <textarea id="a-body" name="body" rows="18" required></textarea>
+            </div>
+            <p class="form-status" id="article-status" role="status" aria-live="polite"></p>
+            <div class="hero-actions">
+              <button class="btn" type="submit">Publish on GitHub{% include arrow.html %}</button>
+              <button class="btn btn--ghost" type="button" id="article-copy">Copy Markdown</button>
+              <button class="btn btn--link" type="button" id="article-clear">Clear draft</button>
+            </div>
+            <p class="small muted">The draft is saved in this browser while you write. Publishing opens GitHub with the file ready: review it and press <strong>Commit changes</strong>.</p>
+          </form>
+
+          <div class="editor-preview" aria-label="Preview">
+            <p class="eyebrow">Preview</p>
+            <h2 class="display-l preview-title" id="preview-title">Your title</h2>
+            <div class="prose" id="preview-body"><p class="muted">Start writing to see the article here.</p></div>
+          </div>
+        </div>
+
+        <!-- ============ FOTO ============ -->
+        <div class="editor editor--photo" id="panel-photo" role="tabpanel" aria-labelledby="tab-photo" hidden>
+          <ol class="photo-steps">
+            <li>
+              <h2 class="h3">Upload the photo</h2>
+              <p class="muted">JPG or WebP, ideally up to 1600 px wide. Use a short name without spaces, such as <code>2026-09-hackathon.jpg</code>.</p>
+              <a class="btn" href="https://github.com/{{ site.repository }}/upload/{{ site.branch }}/assets/gallery" rel="noopener">Upload to assets/gallery{% include arrow.html %}</a>
+            </li>
+            <li>
+              <h2 class="h3">Describe it</h2>
+              <form class="editor-form" id="photo-form" novalidate>
+                <div class="field">
+                  <label for="p-file">File name</label>
+                  <input id="p-file" name="file" type="text" required placeholder="2026-09-hackathon.jpg">
+                </div>
+                <div class="field">
+                  <label for="p-caption">Caption</label>
+                  <input id="p-caption" name="caption" type="text" placeholder="Hackathon at ITEL, September 2026">
+                </div>
+                <div class="field">
+                  <label for="p-alt">Description for screen readers</label>
+                  <input id="p-alt" name="alt" type="text" required placeholder="Abner presenting a BPMN diagram to a room of students">
+                </div>
+                <p class="form-status" id="photo-status" role="status" aria-live="polite"></p>
+                <button class="btn" type="submit">Copy entry and open the gallery file{% include arrow.html %}</button>
+              </form>
+            </li>
+            <li>
+              <h2 class="h3">Paste and commit</h2>
+              <p class="muted">In the file that opens, paste the entry at the end and press <strong>Commit changes</strong>. The photo appears in the gallery about a minute later.</p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>

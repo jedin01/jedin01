@@ -1,0 +1,14 @@
+{%- assign a = include.post -%}
+{%- assign words = a.content | strip_html | number_of_words -%}
+{%- assign minutes = words | divided_by: 200 | plus: 1 -%}
+<article class="article-card reveal">
+  {%- if a.image %}
+  <a class="article-card-media" href="{{ a.url | relative_url }}" tabindex="-1" aria-hidden="true"><img src="{{ a.image | relative_url }}" alt="" loading="lazy"></a>
+  {%- endif %}
+  <p class="article-meta"><time datetime="{{ a.date | date_to_xmlschema }}">{{ a.date | date: "%b %-d, %Y" }}</time> · {{ minutes }} min read{% if a.lang == 'pt' %} · <span lang="pt">Português</span>{% endif %}</p>
+  <h3><a href="{{ a.url | relative_url }}">{{ a.title }}</a></h3>
+  <p>{{ a.description | default: a.excerpt | strip_html | truncate: 170 }}</p>
+  {%- if a.tags.size > 0 %}
+  <ul class="tags tags--plain">{% for t in a.tags limit: 4 %}<li>{{ t }}</li>{% endfor %}</ul>
+  {%- endif %}
+</article>
