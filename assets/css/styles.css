@@ -73,7 +73,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; -webkit-text-size-adjust: 100%; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
@@ -279,13 +279,10 @@ p { margin: 0; }
   border: solid var(--c); will-change: transform, opacity;
 }
 
-/* Topo da página inicial: apresentação com o personagem à direita */
+/* Topo da página inicial: apresentação com a foto à direita */
 .hero--intro .container { grid-template-columns: 1.1fr .9fr; }
-.hero--intro .mascot-card { width: 100%; max-height: calc(100svh - 72px - 48px); justify-self: end; }
-@media (min-width: 881px) {
-  .hero--intro .mascot-card { width: calc(100% + min(40%, (100vw - min(100vw, var(--container))) / 2 + var(--gutter) - 16px)); max-width: none; justify-self: start; }
-}
 .hero--intro .hero-copy .body-l { max-width: 560px; }
+.hero--intro .portrait { width: min(100%, 420px, calc(100svh - 72px - 96px)); }
 .process-art { position: relative; aspect-ratio: 734 / 300; width: 100%; }
 
 /* Ecrãs menores (telemóveis e tablets na vertical, telemóveis deitados): sem o diagrama.
@@ -293,7 +290,7 @@ p { margin: 0; }
 @media (orientation: portrait) and (max-width: 1100px), (max-width: 880px), (orientation: landscape) and (max-height: 500px) {
   .hero-art { display: none; }
   .hero .container { display: block; }
-  .hero--intro .mascot-card { width: min(100%, 440px); max-height: none; margin: var(--space-6) auto 0; }
+  .hero--intro .portrait { width: min(70%, 280px); margin: var(--space-8) auto 0; display: block; }
   .hero-copy { gap: clamp(12px, 2.4vh, 28px); }
 }
 @media (orientation: portrait) and (max-width: 1100px) {
@@ -317,7 +314,7 @@ p { margin: 0; }
 /* Telemóvel deitado: pouca altura, texto compacto */
 @media (orientation: landscape) and (max-height: 500px) {
   .hero { padding-block: var(--space-4); }
-  .hero--intro .mascot-card { display: none; }
+  .hero--intro .portrait { display: none; }
   .hero .eyebrow { display: none; }
   .hero .display-xl { font-size: clamp(26px, 7.5vh, 36px); }
   .hero-copy { gap: var(--space-3); }
@@ -457,7 +454,7 @@ p { margin: 0; }
 .mascot-card .ring { z-index: 1; }
 /* Foto do About: circular, com o motivo dos anéis */
 .portrait { position: relative; margin: 0; width: min(100%, 380px); aspect-ratio: 1; justify-self: center; }
-@media (max-width: 880px) { .portrait { width: min(100%, 280px); margin-top: var(--space-8); } }
+
 .portrait img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; background: var(--surface-sunken); border: 1px solid var(--line); box-shadow: 0 28px 48px -36px rgba(55, 72, 91, .5); }
 .about-side { display: grid; gap: var(--space-6); }
 .quote { margin: 0; padding: var(--space-8); background: var(--surface-raised); border: 1px solid var(--line); border-radius: var(--radius-lg); position: relative; }
@@ -638,6 +635,8 @@ p { margin: 0; }
 .facts ul:not(.tags) { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
 .facts li strong { display: block; font-size: 15px; line-height: 22px; }
 .facts li span { font-size: 13px; line-height: 20px; color: var(--ink-muted); }
+.facts-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); margin-top: var(--space-12); align-items: stretch; }
+@media (max-width: 880px) { .facts-row { grid-template-columns: 1fr; gap: var(--space-4); } }
 .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8) var(--space-6); margin-bottom: var(--space-8); }
 @media (max-width: 880px) { .story, .quotes { grid-template-columns: 1fr; } }
 
