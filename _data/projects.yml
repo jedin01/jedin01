@@ -1,5 +1,17 @@
 # Projetos mostrados em /work/ (todos) e na página inicial (featured: true).
 # tone: blue, teal, green ou sunny.
+- title: Default BPMN linting in VS Code
+  type: Open source contribution
+  tone: teal
+  featured: true
+  description: >-
+    I keep BPMN files in Git and edit them in VS Code, so I opened issue #1320 and PR #1321 on
+    Miragon's BPMN Modeler. Their team expanded the idea and shipped platform-aware linting
+    (Camunda 7 or 8), on by default, in v1.8.0.
+  tags: [BPMN as code, VS Code, TypeScript]
+  link: https://github.com/Miragon/bpmn-vscode-modeler/pull/1321
+  link_label: See the pull request
+
 - title: Zeebe gateway rate limiter
   type: Open source · Camunda 8
   tone: blue
@@ -10,17 +22,6 @@
   tags: [Java, gRPC, Zeebe, Docker]
   link: https://github.com/jedin01/camunda-rate-limit-zeebe-interceptor
   link_label: View code
-
-- title: Default BPMN linting in VS Code
-  type: Open source contribution
-  tone: teal
-  featured: true
-  description: >-
-    Opened issue #1320 and PR #1321 on Miragon's BPMN Modeler. The discussion led to
-    platform-aware linting (Camunda 7 or 8) turned on by default in v1.8.0.
-  tags: [BPMN, VS Code, TypeScript]
-  link: /articles/bpmn-and-git/
-  link_label: Read the article
 
 - title: Expense reimbursement orchestrator
   type: Process automation
@@ -37,16 +38,19 @@
   type: In progress
   tone: sunny
   description: >-
-    Turning banking services that usually need a branch visit, such as customer onboarding
-    and credit applications, into executable and auditable BPMN workflows.
+    A process automation platform that turns banking services that usually need a branch visit,
+    such as customer onboarding and credit applications, into executable, auditable BPMN workflows.
+    Regulatory rules become gateways and compliance checkpoints, so regulation stops being
+    documentation and becomes process logic. Designed to production standards.
   tags: [Java, Spring Boot, Camunda 8, BPMN]
 
 - title: Kixi
   type: Edtech · co-built
   tone: blue
   description: >-
-    A platform built by students for students: past exams become simulated tests with
-    instant feedback and an AI study assistant, so preparing for exams in Angola is fairer.
+    Angolan edtech built by students for students. Teachers upload past exams and Kixi turns them
+    into interactive mock tests in seconds, with instant feedback, an AI tutor that knows what was
+    actually asked, and leaderboards across institutions.
   tags: [Spring, Next.js, AI]
   link: https://kixi.creativemode.ao
   link_label: Visit Kixi

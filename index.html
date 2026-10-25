@@ -6,12 +6,12 @@ nav: home
     <section class="hero hero--intro section--sunken" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-copy">
-          <p class="eyebrow">Hi, I'm Abner</p>
+          <p class="eyebrow">Hi, I'm Abner&nbsp;· Open to remote</p>
           <h1 class="display-xl" id="hero-title">I build the processes that keep a bank running.</h1>
-          <p class="body-l">I'm a backend software engineer in Luanda, Angola. At Selenium Digital Solutions I orchestrate critical banking operations with Camunda 8 and Zeebe, from the BPMN and DMN models to the Java and Spring Boot workers behind each step. Open to remote work.</p>
+          <p class="body-l">I'm a backend software engineer in Luanda, Angola. At Selenium Digital Solutions I orchestrate critical banking operations with Camunda 8 and Zeebe, from the BPMN and DMN models to the Java and Spring Boot workers behind each step.</p>
           <div class="hero-actions">
-            <a class="btn" href="{{ '/about/' | relative_url }}">More about me{% include arrow.html %}</a>
-            <a class="btn btn--ghost" href="{{ '/work/' | relative_url }}">See my work</a>
+            <a class="btn" href="{{ '/work/' | relative_url }}">See my work{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}">More about me</a>
           </div>
         </div>
 {% include mascot.html eager=true %}
@@ -63,12 +63,12 @@ nav: home
 
           <article class="front tone-sunny reveal">
             <div class="front-icon"><span class="ring" style="--c:var(--brand-sunny)"></span><span class="dot" style="--c:var(--brand-blue)"></span></div>
-            <h3>Data modeling</h3>
-            <p class="muted">Schemas that match the business.</p>
+            <h3>Open source &amp; writing</h3>
+            <p class="muted">Sharing what I learn about the engine.</p>
             <ul>
-              <li>Conceptual, logical and physical models</li>
-              <li>Normalization, keys and constraints</li>
-              <li>PostgreSQL, MSSQL and MySQL</li>
+              <li>BPMN as code: versioned in Git, linted in VS Code</li>
+              <li>A rate limiter for the Zeebe Gateway</li>
+              <li>A newsletter on the why behind Camunda</li>
             </ul>
           </article>
         </div>
@@ -94,8 +94,45 @@ nav: home
       </div>
     </section>
 
+    <!-- ============ OPEN TO ============ -->
+    <section class="section" aria-labelledby="open-title">
+      <div class="container why">
+        <div class="why-intro reveal">
+          <p class="eyebrow">What I'm looking for</p>
+          <h2 class="display-l" id="open-title">Remote work on Camunda&nbsp;8.</h2>
+          <p class="body-l">I want to join teams building on Camunda 8, BPM or Java integrations, especially in banking and insurance. Certified by Camunda as a Developer and in BPMN.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#contact">Get in touch{% include arrow.html %}</a>
+          </div>
+        </div>
+
+        <div class="why-cards">
+          <article class="why-card tone-blue reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5.5A1.5 1.5 0 0 1 9.5 4h5A1.5 1.5 0 0 1 16 5.5V7M3 13h18"/></svg></span>
+            <h3>Full-time roles</h3>
+            <p>Camunda Developer, BPM Developer or Workflow Automation Engineer, fully remote.</p>
+          </article>
+          <article class="why-card tone-teal reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4.5l5 5L9 20H4v-5z"/><path d="M12.5 6.5l5 5"/></svg></span>
+            <h3>Consulting</h3>
+            <p>Camunda 8 and BPM consulting: modeling a process, writing its workers or getting it to production.</p>
+          </article>
+          <article class="why-card tone-green reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <h3>European hours</h3>
+            <p>Luanda is on UTC+1, the same working hours as most of Europe.</p>
+          </article>
+          <article class="why-card tone-sunny reveal">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H8l-4 4z"/><path d="M8 9.5h8M8 12.5h5"/></svg></span>
+            <h3>Async in English</h3>
+            <p>Comfortable with written specs, pull request reviews and async updates in English.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ PROCESS ============ -->
-    <section class="section" aria-labelledby="process-title">
+    <section class="section section--sunken" aria-labelledby="process-title">
       <div class="container about">
         <div class="about-copy reveal">
           <p class="eyebrow">How I think</p>
@@ -113,7 +150,7 @@ nav: home
     </section>
 
     <!-- ============ LATEST ARTICLES ============ -->
-    <section class="section section--sunken" aria-labelledby="latest-title">
+    <section class="section" aria-labelledby="latest-title">
       <div class="container">
         <div class="section-row reveal">
           <div class="section-head">
