@@ -3,26 +3,23 @@ title: Home
 nav: home
 ---
     <!-- ============ HERO ============ -->
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero hero--intro section--sunken" aria-labelledby="hero-title">
       <div class="container">
         <div class="hero-copy">
-          <p class="eyebrow">Backend Software Engineer&nbsp;· Camunda&nbsp;8&nbsp;· Java&nbsp;&amp; Spring Boot</p>
+          <p class="eyebrow">Hi, I'm Abner</p>
           <h1 class="display-xl" id="hero-title">I build the processes that keep a bank running.</h1>
-          <p class="body-l">I orchestrate critical banking operations with Camunda 8 and Zeebe, from BPMN and DMN models to the Java and Spring Boot workers behind each step. Based in Luanda, open to remote work.</p>
+          <p class="body-l">I'm a backend software engineer in Luanda, Angola. At Selenium Digital Solutions I orchestrate critical banking operations with Camunda 8 and Zeebe, from the BPMN and DMN models to the Java and Spring Boot workers behind each step. Open to remote work.</p>
           <div class="hero-actions">
-            <a class="btn" href="{{ '/work/' | relative_url }}">See my work{% include arrow.html %}</a>
-            <a class="btn btn--ghost" href="#contact">Get in touch</a>
+            <a class="btn" href="{{ '/about/' | relative_url }}">More about me{% include arrow.html %}</a>
+            <a class="btn btn--ghost" href="{{ '/work/' | relative_url }}">See my work</a>
           </div>
         </div>
-
-        <div class="hero-art" data-parallax="0.06">
-          {% include bpmn.html %}
-        </div>
+{% include mascot.html eager=true %}
       </div>
     </section>
 
     <!-- ============ WHAT I DO ============ -->
-    <section class="section section--sunken" aria-labelledby="work-title">
+    <section class="section" aria-labelledby="work-title">
       <div class="container">
         <div class="section-head reveal">
           <p class="eyebrow">What I do</p>
@@ -79,7 +76,7 @@ nav: home
     </section>
 
     <!-- ============ FEATURED WORK ============ -->
-    <section class="section" aria-labelledby="featured-title">
+    <section class="section section--sunken" aria-labelledby="featured-title">
       <div class="container">
         <div class="section-row reveal">
           <div class="section-head">
@@ -97,24 +94,26 @@ nav: home
       </div>
     </section>
 
-    <!-- ============ MEET ME ============ -->
-    <section class="section section--sunken" aria-labelledby="meet-title">
+    <!-- ============ PROCESS ============ -->
+    <section class="section" aria-labelledby="process-title">
       <div class="container about">
         <div class="about-copy reveal">
-          <p class="eyebrow">Hi, I'm Abner</p>
-          <h2 class="display-l" id="meet-title">Curious about what runs behind the scenes.</h2>
-          <p class="body-l">I enjoy the parts most people skip: extending a gateway, running Keycloak and Docker in our own environments, reading the engine docs until the why makes sense. Before Camunda I shipped PHP, Laravel and Next.js systems and taught data modeling.</p>
+          <p class="eyebrow">How I think</p>
+          <h2 class="display-l" id="process-title">Every step modeled, every step running.</h2>
+          <p class="body-l">An application arrives, someone reviews it within 48 hours, a gateway decides, and a worker either opens the account in core banking or the customer hears why not. I draw that in BPMN 2.0 with the people who own the process, then write the code that makes each box run on Zeebe.</p>
           <div class="hero-actions">
-            <a class="btn" href="{{ '/about/' | relative_url }}">More about me{% include arrow.html %}</a>
+            <a class="btn" href="{{ '/articles/' | relative_url }}">Read my notes{% include arrow.html %}</a>
             <a class="btn btn--ghost" href="{{ '/gallery/' | relative_url }}">See the gallery</a>
           </div>
         </div>
-{% include mascot.html %}
+        <div class="process-art reveal" data-parallax="0.04">
+          {% include bpmn.html %}
+        </div>
       </div>
     </section>
 
     <!-- ============ LATEST ARTICLES ============ -->
-    <section class="section" aria-labelledby="latest-title">
+    <section class="section section--sunken" aria-labelledby="latest-title">
       <div class="container">
         <div class="section-row reveal">
           <div class="section-head">
