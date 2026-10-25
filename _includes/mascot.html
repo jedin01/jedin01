@@ -1,5 +1,5 @@
         <figure class="mascot-card reveal" data-bubbles data-origin="22 38" data-palette="blue bubble" data-size="8 30" data-spread="0.05 0.6" data-fill>
-          <img src="{{ '/assets/img/mascote.png' | relative_url }}" width="623" height="520" alt="Hand-drawn illustration of Abner: glasses, curly hair, blowing soap bubbles." loading="lazy">
+          <img src="{{ '/assets/img/mascote.png' | relative_url }}" width="623" height="520" alt="Hand-drawn illustration of Abner: glasses, curly hair, blowing soap bubbles." {% if include.eager %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
           <span class="dot static" aria-hidden="true" style="--d:36px;--c:var(--brand-blue);left:20%;top:10%"></span>
           <span class="dot static" aria-hidden="true" style="--d:20px;--c:var(--brand-blue);left:36%;top:4%"></span>
         </figure>

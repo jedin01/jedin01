@@ -179,9 +179,8 @@ p { margin: 0; }
 }
 .site-header.is-scrolled { border-bottom-color: var(--line); box-shadow: 0 8px 24px -20px rgba(55, 72, 91, .4); }
 
-.site-header .container { display: flex; align-items: center; gap: var(--space-6); min-height: 72px; }
+.site-header .container { display: flex; align-items: center; justify-content: flex-end; gap: var(--space-6); min-height: 72px; }
 
-.brand { display: inline-flex; align-items: center; text-decoration: none; margin-right: auto; }
 /* Assinatura: o nome em Comfortaa com um anel no lugar do ponto */
 .wordmark { display: inline-flex; align-items: flex-end; gap: 3px; font: 700 24px/1 var(--font-round); color: var(--ink); letter-spacing: -.01em; }
 .wordmark-dot { width: 11px; height: 11px; margin-bottom: 2px; border-radius: 50%; border: 3px solid var(--brand-teal); }
@@ -283,11 +282,21 @@ p { margin: 0; }
   border: solid var(--c); will-change: transform, opacity;
 }
 
+/* Topo da página inicial: apresentação com o personagem à direita */
+.hero--intro .container { grid-template-columns: 1.1fr .9fr; }
+.hero--intro .mascot-card { width: 100%; max-height: calc(100svh - 72px - 48px); justify-self: end; }
+@media (min-width: 881px) {
+  .hero--intro .mascot-card { width: calc(100% + min(40%, (100vw - min(100vw, var(--container))) / 2 + var(--gutter) - 16px)); max-width: none; justify-self: start; }
+}
+.hero--intro .hero-copy .body-l { max-width: 560px; }
+.process-art { position: relative; aspect-ratio: 660 / 380; width: 100%; }
+
 /* Ecrãs menores (telemóveis e tablets na vertical, telemóveis deitados): sem o diagrama.
    O texto ocupa a largura e fica centrado na altura. */
 @media (orientation: portrait) and (max-width: 1100px), (max-width: 880px), (orientation: landscape) and (max-height: 500px) {
   .hero-art { display: none; }
   .hero .container { display: block; }
+  .hero--intro .mascot-card { width: min(100%, 440px); max-height: none; margin: var(--space-6) auto 0; }
   .hero-copy { gap: clamp(12px, 2.4vh, 28px); }
 }
 @media (orientation: portrait) and (max-width: 1100px) {
@@ -311,6 +320,7 @@ p { margin: 0; }
 /* Telemóvel deitado: pouca altura, texto compacto */
 @media (orientation: landscape) and (max-height: 500px) {
   .hero { padding-block: var(--space-4); }
+  .hero--intro .mascot-card { display: none; }
   .hero .eyebrow { display: none; }
   .hero .display-xl { font-size: clamp(26px, 7.5vh, 36px); }
   .hero-copy { gap: var(--space-3); }

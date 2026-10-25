@@ -41,9 +41,8 @@
 
   <header class="site-header" id="topo">
     <div class="container">
-      <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.author.name }}, home"><span class="wordmark">abner<span class="wordmark-dot" aria-hidden="true"></span></span></a>
-
       <nav class="nav" id="nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/work/' | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Work</a>
         <a href="{{ '/articles/' | relative_url }}"{% if page.nav == 'articles' %} aria-current="page"{% endif %}>Articles</a>
         <a href="{{ '/gallery/' | relative_url }}"{% if page.nav == 'gallery' %} aria-current="page"{% endif %}>Gallery</a>
