@@ -1,76 +1,72 @@
-<!-- Processo BPMN 2.0 (abertura de conta) com notação do Camunda Modeler.
-     Um token de instância percorre o caminho principal, como no Operate. -->
-<svg class="bpmn" viewBox="0 0 660 380" role="img" aria-labelledby="bpmn-title">
-  <title id="bpmn-title">BPMN 2.0 diagram of a customer onboarding process: application received, review application with a 48 hour timer, approved gateway, open account in core banking or notify customer.</title>
+<!-- Processo BPMN 2.0 (pedido de crédito) com notação do Camunda Modeler.
+     Split e merge exclusivos simétricos; um token de instância percorre o caminho de baixo risco, como no Operate. -->
+<svg class="bpmn" viewBox="-24 0 734 300" role="img" aria-labelledby="bpmn-title">
+  <title id="bpmn-title">BPMN 2.0 diagram of a credit request process: request received, a DMN table scores the risk, low risk requests are approved in core banking and high risk ones go to an analyst, then both paths merge and the customer is notified.</title>
   <defs>
     <marker id="bpmn-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0 L10 5 L0 10 z" class="bpmn-arrowhead"/>
     </marker>
   </defs>
 
-  <!-- Pool e lane -->
-  <rect class="bpmn-pool" x="8" y="8" width="644" height="364" rx="4"/>
-  <path class="bpmn-pool-line" d="M40 8 V372"/>
-  <text class="bpmn-pool-label" transform="translate(28 190) rotate(-90)">Bank · Customer onboarding</text>
-
   <!-- Fluxos de sequência -->
   <g class="bpmn-flows" marker-end="url(#bpmn-arrow)">
-    <path d="M108 150 H140"/>
-    <path d="M250 150 H270"/>
-    <path d="M320 150 H360"/>
-    <path d="M480 150 H532"/>
-    <path d="M295 175 V290 H360"/>
-    <path d="M480 290 H532"/>
-    <path d="M195 204 V352 H420 V330"/>
+    <path d="M48 150 H80"/>
+    <path d="M184 150 H214"/>
+    <path d="M239 125 V70 H300"/>
+    <path d="M239 175 V230 H300"/>
+    <path d="M404 70 H465 V125"/>
+    <path d="M404 230 H465 V175"/>
+    <path d="M490 150 H520"/>
+    <path d="M624 150 H646"/>
   </g>
-  <text class="bpmn-label bpmn-label--flow" x="340" y="142">Yes</text>
-  <text class="bpmn-label bpmn-label--flow" x="303" y="232" text-anchor="start">No</text>
+  <text class="bpmn-label bpmn-label--flow" x="246" y="63" text-anchor="start">Low risk</text>
+  <text class="bpmn-label bpmn-label--flow" x="246" y="223" text-anchor="start">High risk</text>
 
   <!-- Evento de início por mensagem -->
-  <circle class="bpmn-shape" cx="90" cy="150" r="18"/>
-  <rect class="bpmn-mark" x="80" y="144" width="20" height="13" rx="1"/>
-  <path class="bpmn-mark" d="M80 144 L90 151 L100 144"/>
-  <text class="bpmn-label" x="90" y="186"><tspan x="90">Application</tspan><tspan x="90" dy="13">received</tspan></text>
+  <circle class="bpmn-shape" cx="30" cy="150" r="18"/>
+  <rect class="bpmn-mark" x="20" y="144" width="20" height="13" rx="1"/>
+  <path class="bpmn-mark" d="M20 144 L30 151 L40 144"/>
+  <text class="bpmn-label" x="30" y="186"><tspan x="30">Credit request</tspan><tspan x="30" dy="13">received</tspan></text>
 
-  <!-- User task -->
-  <rect class="bpmn-shape bpmn-task" x="140" y="110" width="110" height="80" rx="10"/>
-  <circle class="bpmn-mark" cx="155" cy="121" r="4"/>
-  <path class="bpmn-mark" d="M148 132 C149 126 161 126 162 132"/>
-  <text class="bpmn-label" x="195" y="149"><tspan x="195">Review</tspan><tspan x="195" dy="14">application</tspan></text>
+  <!-- Business rule task (DMN) -->
+  <rect class="bpmn-shape bpmn-task" x="80" y="114" width="104" height="72" rx="10"/>
+  <rect class="bpmn-mark" x="88" y="121" width="16" height="12" rx="1"/>
+  <path class="bpmn-mark" d="M88 125 H104 M93 125 V133"/>
+  <text class="bpmn-label" x="132" y="149"><tspan x="132">Score</tspan><tspan x="132" dy="14">credit risk</tspan></text>
 
-  <!-- Evento de temporizador de fronteira (SLA) -->
-  <circle class="bpmn-shape" cx="195" cy="190" r="14"/>
-  <circle class="bpmn-mark" cx="195" cy="190" r="11"/>
-  <circle class="bpmn-mark" cx="195" cy="190" r="7"/>
-  <path class="bpmn-mark" d="M195 185 V190 L198.5 192"/>
-  <text class="bpmn-label" x="214" y="216" text-anchor="start">48 h</text>
-
-  <!-- Gateway exclusivo -->
-  <path class="bpmn-shape" d="M295 125 L320 150 L295 175 L270 150 z"/>
-  <path class="bpmn-mark bpmn-mark--bold" d="M287 142 L303 158 M303 142 L287 158"/>
-  <text class="bpmn-label" x="295" y="114">Approved?</text>
+  <!-- Gateway exclusivo (split) -->
+  <path class="bpmn-shape" d="M239 125 L264 150 L239 175 L214 150 z"/>
+  <path class="bpmn-mark bpmn-mark--bold" d="M231 142 L247 158 M247 142 L231 158"/>
 
   <!-- Service task -->
-  <rect class="bpmn-shape bpmn-task" x="360" y="110" width="120" height="80" rx="10"/>
-  <circle class="bpmn-mark" cx="375" cy="123" r="4.5"/>
-  <path class="bpmn-mark" d="M375 115.5 V117.5 M375 128.5 V130.5 M367.5 123 H369.5 M380.5 123 H382.5 M369.7 117.7 L371.1 119.1 M378.9 126.9 L380.3 128.3 M369.7 128.3 L371.1 126.9 M378.9 119.1 L380.3 117.7"/>
-  <text class="bpmn-label" x="420" y="149"><tspan x="420">Open account</tspan><tspan x="420" dy="14">in core banking</tspan></text>
+  <rect class="bpmn-shape bpmn-task" x="300" y="34" width="104" height="72" rx="10"/>
+  <circle class="bpmn-mark" cx="315" cy="47" r="4.5"/>
+  <path class="bpmn-mark" d="M315 39.5 V41.5 M315 52.5 V54.5 M307.5 47 H309.5 M320.5 47 H322.5 M309.7 41.7 L311.1 43.1 M318.9 50.9 L320.3 52.3 M309.7 52.3 L311.1 50.9 M318.9 43.1 L320.3 41.7"/>
+  <text class="bpmn-label" x="352" y="69"><tspan x="352">Approve in</tspan><tspan x="352" dy="14">core banking</tspan></text>
+
+  <!-- User task -->
+  <rect class="bpmn-shape bpmn-task" x="300" y="194" width="104" height="72" rx="10"/>
+  <circle class="bpmn-mark" cx="315" cy="205" r="4"/>
+  <path class="bpmn-mark" d="M308 216 C309 210 321 210 322 216"/>
+  <text class="bpmn-label" x="352" y="229"><tspan x="352">Analyst</tspan><tspan x="352" dy="14">review</tspan></text>
+
+  <!-- Gateway exclusivo (merge) -->
+  <path class="bpmn-shape" d="M465 125 L490 150 L465 175 L440 150 z"/>
+  <path class="bpmn-mark bpmn-mark--bold" d="M457 142 L473 158 M473 142 L457 158"/>
 
   <!-- Send task -->
-  <rect class="bpmn-shape bpmn-task" x="360" y="250" width="120" height="80" rx="10"/>
-  <rect class="bpmn-mark-fill" x="367" y="257" width="17" height="12" rx="1"/>
-  <path class="bpmn-mark-inv" d="M367 257 L375.5 264 L384 257"/>
-  <text class="bpmn-label" x="420" y="289"><tspan x="420">Notify</tspan><tspan x="420" dy="14">customer</tspan></text>
+  <rect class="bpmn-shape bpmn-task" x="520" y="114" width="104" height="72" rx="10"/>
+  <rect class="bpmn-mark-fill" x="527" y="121" width="17" height="12" rx="1"/>
+  <path class="bpmn-mark-inv" d="M527 121 L535.5 128 L544 121"/>
+  <text class="bpmn-label" x="572" y="149"><tspan x="572">Notify</tspan><tspan x="572" dy="14">customer</tspan></text>
 
-  <!-- Eventos de fim -->
-  <circle class="bpmn-shape bpmn-end" cx="550" cy="150" r="18"/>
-  <text class="bpmn-label" x="550" y="186"><tspan x="550">Account</tspan><tspan x="550" dy="13">opened</tspan></text>
-  <circle class="bpmn-shape bpmn-end" cx="550" cy="290" r="18"/>
-  <text class="bpmn-label" x="550" y="326">Rejected</text>
+  <!-- Evento de fim -->
+  <circle class="bpmn-shape bpmn-end" cx="664" cy="150" r="18"/>
+  <text class="bpmn-label" x="664" y="186"><tspan x="664">Customer</tspan><tspan x="664" dy="13">notified</tspan></text>
 
   <!-- Token da instância: pára em cada tarefa, como uma instância real -->
   <circle class="bpmn-token" r="8" cx="0" cy="0">
-    <animateMotion dur="7s" repeatCount="indefinite" calcMode="linear" path="M90 150 H550"
-      keyTimes="0;0.1;0.3;0.38;0.46;0.56;0.78;0.9;1" keyPoints="0;0.228;0.228;0.446;0.446;0.717;0.717;1;1"/>
+    <animateMotion dur="8s" repeatCount="indefinite" calcMode="linear" path="M30 150 H239 V70 H465 V150 H664"
+      keyTimes="0;0.1;0.22;0.45;0.57;0.8;0.9;0.97;1" keyPoints="0;0.128;0.128;0.506;0.506;0.884;0.884;1;1"/>
   </circle>
 </svg>
