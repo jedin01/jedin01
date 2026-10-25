@@ -11,10 +11,14 @@ nav: home
           <p class="body-l">Backend engineer in Luanda, Angola, specialised in Camunda 8 and Zeebe. I sit down with the people who run a process, draw it in BPMN, and write the Java that makes every step happen: visible, auditable and safe to retry.</p>
           <div class="hero-actions">
             <a class="btn" href="{{ '/work/' | relative_url }}">See my work{% include arrow.html %}</a>
-            <a class="btn btn--ghost" href="{{ '/about/' | relative_url }}">More about me</a>
+            <a class="btn btn--ghost" href="#about">More about me</a>
           </div>
         </div>
-{% include mascot.html eager=true %}
+        <figure class="portrait">
+          <img src="{{ site.author.photo | relative_url }}" width="400" height="400" alt="Portrait of Abner Lourenço" fetchpriority="high">
+          <span class="ring" aria-hidden="true" style="--d:64px;--c:var(--brand-teal);right:2%;top:4%"></span>
+          <span class="dot" aria-hidden="true" style="--d:18px;--c:var(--brand-blue);left:6%;bottom:12%"></span>
+        </figure>
       </div>
     </section>
 
@@ -94,8 +98,46 @@ nav: home
       </div>
     </section>
 
+    <!-- ============ ABOUT ============ -->
+    <section class="section section--sunken" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about">
+          <div class="about-copy reveal">
+            <p class="eyebrow">About me</p>
+            <h2 class="display-l" id="about-title">Curious about what runs behind the scenes.</h2>
+            <p class="body-l">I enjoy the parts most people skip: a rate limiting layer for a self-managed Zeebe Gateway, the default BPMN linting Miragon shipped in their VS Code modeler, Keycloak and Docker in our own environments. I read the engine docs until the why makes sense, then share it in my newsletter.</p>
+            <p class="body-l">Before Camunda I shipped PHP, Laravel and Next.js systems, led junior developers through code review and taught data modeling at ITEL. Outside work I build for Luanda: a study platform for students and a map of the city's informal taxi routes.</p>
+          </div>
+{% include mascot.html %}
+        </div>
+        <div class="facts-row">
+          <div class="facts reveal">
+            <h3>Education</h3>
+            <ul>
+              <li><strong>BSc Computer Science</strong><span>University of the People · 2026 – 2030</span></li>
+              <li><strong>Technical degree, IT &amp; Multimedia Systems</strong><span>ITEL · 2022 – 2026</span></li>
+            </ul>
+          </div>
+          <div class="facts reveal">
+            <h3>Certifications</h3>
+            <ul>
+              <li><strong>Camunda Knowledge: Developer</strong><span>Camunda · 2026</span></li>
+              <li><strong>Camunda Knowledge: BPMN</strong><span>Camunda · 2026</span></li>
+              <li><strong>GitHub Actions for CI/CD</strong><span>LinkedIn Learning · 2026</span></li>
+            </ul>
+          </div>
+          <div class="facts reveal">
+            <h3>Toolbox</h3>
+            <ul class="tags tags--plain">
+              <li>Camunda 8</li><li>Zeebe</li><li>BPMN</li><li>DMN</li><li>FEEL</li><li>Java</li><li>Spring Boot</li><li>RabbitMQ</li><li>Keycloak</li><li>PostgreSQL</li><li>MSSQL</li><li>Elasticsearch</li><li>Docker</li><li>Linux</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============ OPEN TO ============ -->
-    <section class="section section--sunken" aria-labelledby="open-title">
+    <section class="section" aria-labelledby="open-title">
       <div class="container why">
         <div class="why-intro reveal">
           <p class="eyebrow">What I'm looking for</p>
@@ -132,7 +174,7 @@ nav: home
     </section>
 
     <!-- ============ PROCESS ============ -->
-    <section class="section" aria-labelledby="process-title">
+    <section class="section section--sunken" aria-labelledby="process-title">
       <div class="container about">
         <div class="about-copy reveal">
           <p class="eyebrow">How I think</p>
@@ -146,6 +188,36 @@ nav: home
         <div class="process-art reveal" data-parallax="0.04">
           {% include bpmn.html %}
         </div>
+      </div>
+    </section>
+
+    <!-- ============ WORDS ============ -->
+    <section class="section" aria-labelledby="words-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">In other words</p>
+          <h2 class="display-l" id="words-title">What people I've worked with say.</h2>
+        </div>
+        <div class="quotes">
+          <figure class="quote reveal">
+            <blockquote>
+              <p>“Abner is genuinely curious, passionate about understanding how technologies work behind the scenes. That curiosity, together with his dedication, makes him grow fast and find well-grounded solutions.”</p>
+            </blockquote>
+            <figcaption><strong>Noé Idagi</strong> · Technology Leader <span class="muted">· translated from Portuguese</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <blockquote>
+              <p>“I saw his strong skills in development, logical reasoning, and process analysis and mapping, and how easily he turns complex processes into effective solutions.”</p>
+            </blockquote>
+            <figcaption><strong>Dissoloquele Morais Bengui</strong> · Machine Learning Engineer <span class="muted">· translated from Portuguese</span></figcaption>
+          </figure>
+        </div>
+        <a class="newsletter reveal" href="{{ site.author.newsletter }}" rel="noopener">
+          <span class="eyebrow">Newsletter</span>
+          <strong>Inside the History: Camunda</strong>
+          <span>The why behind the engine, not only the how.</span>
+          {% include arrow.html %}
+        </a>
       </div>
     </section>
 

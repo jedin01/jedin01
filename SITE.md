@@ -8,7 +8,7 @@ publishes it on every push to `main`. `README.md` stays as the GitHub profile RE
 
 ```
 index.html            Home
-work/  about/         Work (experience, projects) and About
+work/                 Work (experience, projects); about/ redirects to the About section on the home page
 articles/             Article list; articles live in _posts/
 gallery/              Photo gallery; photos are listed in _data/gallery.yml
 write/                Write an article or add a photo (opens GitHub with the file ready)

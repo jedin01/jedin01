@@ -1,80 +1,18 @@
 ---
-title: About
-nav: about
-description: Abner Lourenço, backend software engineer in Luanda. Camunda 8, BPMN, Java, teaching and writing.
+layout: null
+sitemap: false
 ---
-    <section class="page-hero page-hero--split" aria-labelledby="page-title">
-      <div class="container about">
-        <div class="about-copy">
-          <p class="eyebrow">About&nbsp;· Open to remote</p>
-          <h1 class="display-xl" id="page-title">Hi, I'm Abner.</h1>
-          <p class="body-l">I'm a backend software engineer in Luanda, Angola. At Selenium Digital Solutions I build the automated processes behind Angolan banks on Camunda 8: customer onboarding, integrations with core banking and middleware, and a dormant-account batch that runs end to end with no manual steps.</p>
-        </div>
-        <figure class="portrait">
-          <img src="{{ site.author.photo | relative_url }}" width="400" height="400" alt="Portrait of Abner Lourenço" fetchpriority="high">
-          <span class="ring" aria-hidden="true" style="--d:64px;--c:var(--brand-teal);right:2%;top:4%"></span>
-          <span class="dot" aria-hidden="true" style="--d:18px;--c:var(--brand-blue);left:6%;bottom:12%"></span>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section section--sunken" aria-labelledby="story-title">
-      <div class="container story">
-        <div class="story-text reveal">
-          <p class="eyebrow">The longer version</p>
-          <h2 class="display-l" id="story-title">Curious about what runs behind the scenes.</h2>
-          <p class="body-l">I enjoy the parts most people skip. I built a rate limiting layer for a self-managed Zeebe Gateway, proposed the default BPMN linting that Miragon shipped in their VS Code modeler, I run Keycloak and Docker in our environments, and I read the engine documentation until the why makes sense, not only the how. I share what I learn in my newsletter, Inside the History: Camunda.</p>
-          <p class="body-l">Before this I shipped PHP, Laravel and Next.js systems for public sector and education projects, led junior developers through code review, and taught data modeling and programming logic at ITEL. Teaching made me write code that someone else can pick up on a Monday morning.</p>
-          <p class="body-l">Outside work I build things for the city I live in: a study platform for Angolan students, a map of Luanda's informal taxi routes, a concept for transparent public procurement.</p>
-        </div>
-
-        <aside class="story-side reveal" aria-label="Education and certifications">
-          <div class="facts">
-            <h3>Education</h3>
-            <ul>
-              <li><strong>BSc Computer Science</strong><span>University of the People · 2026 – 2030</span></li>
-              <li><strong>Technical degree, IT &amp; Multimedia Systems</strong><span>ITEL · 2022 – 2026</span></li>
-            </ul>
-            <h3>Certifications</h3>
-            <ul>
-              <li><strong>Camunda Knowledge: Developer</strong><span>Camunda · 2026</span></li>
-              <li><strong>Camunda Knowledge: BPMN</strong><span>Camunda · 2026</span></li>
-              <li><strong>GitHub Actions for CI/CD</strong><span>LinkedIn Learning · 2026</span></li>
-            </ul>
-            <h3>Toolbox</h3>
-            <ul class="tags tags--plain">
-              <li>Camunda 8</li><li>Zeebe</li><li>BPMN</li><li>DMN</li><li>FEEL</li><li>Java</li><li>Spring Boot</li><li>RabbitMQ</li><li>Keycloak</li><li>PostgreSQL</li><li>MSSQL</li><li>Elasticsearch</li><li>Docker</li><li>Linux</li>
-            </ul>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <section class="section" aria-labelledby="words-title">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="eyebrow">In other words</p>
-          <h2 class="display-l" id="words-title">What people I've worked with say.</h2>
-        </div>
-        <div class="quotes">
-          <figure class="quote reveal">
-            <blockquote>
-              <p>“Abner is genuinely curious, passionate about understanding how technologies work behind the scenes. That curiosity, together with his dedication, makes him grow fast and find well-grounded solutions.”</p>
-            </blockquote>
-            <figcaption><strong>Noé Idagi</strong> · Technology Leader <span class="muted">· translated from Portuguese</span></figcaption>
-          </figure>
-          <figure class="quote reveal">
-            <blockquote>
-              <p>“I saw his strong skills in development, logical reasoning, and process analysis and mapping, and how easily he turns complex processes into effective solutions.”</p>
-            </blockquote>
-            <figcaption><strong>Dissoloquele Morais Bengui</strong> · Machine Learning Engineer <span class="muted">· translated from Portuguese</span></figcaption>
-          </figure>
-        </div>
-        <a class="newsletter reveal" href="{{ site.author.newsletter }}" rel="noopener">
-          <span class="eyebrow">Newsletter</span>
-          <strong>Inside the History: Camunda</strong>
-          <span>The why behind the engine, not only the how.</span>
-          {% include arrow.html %}
-        </a>
-      </div>
-    </section>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About · {{ site.title }}</title>
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="{{ '/' | absolute_url }}#about">
+  <meta http-equiv="refresh" content="0; url={{ '/' | relative_url }}#about">
+  <script>location.replace('{{ '/' | relative_url }}#about');</script>
+</head>
+<body>
+  <p>The about section now lives on the <a href="{{ '/' | relative_url }}#about">homepage</a>.</p>
+</body>
+</html>
