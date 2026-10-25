@@ -14,9 +14,7 @@
   <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
   <meta property="og:title" content="{{ page_title }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  {%- if page.image %}
-  <meta property="og:image" content="{{ page.image | absolute_url }}">
-  {%- endif %}
+  <meta property="og:image" content="{{ page.image | default: site.author.photo | absolute_url }}">
   {%- if page.noindex %}
   <meta name="robots" content="noindex">
   {%- endif %}
@@ -30,7 +28,7 @@
   {%- if page.url == "/" %}
   <script type="application/ld+json">
   {"@context": "https://schema.org", "@type": "Person", "name": "{{ site.author.name }}", "jobTitle": "Backend Software Engineer",
-    "url": "{{ '/' | absolute_url }}", "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
+    "url": "{{ '/' | absolute_url }}", "image": "{{ site.author.photo | absolute_url }}", "email": "mailto:{{ site.author.email }}", "address": {"@type": "PostalAddress", "addressLocality": "Luanda", "addressCountry": "AO"},
     "sameAs": ["{{ site.author.linkedin }}", "{{ site.author.github }}"]}
   </script>
   {%- endif %}
@@ -45,7 +43,9 @@
         <a href="{{ '/' | relative_url }}"{% if page.nav == 'home' %} aria-current="page"{% endif %}>Home</a>
         <a href="{{ '/work/' | relative_url }}"{% if page.nav == 'work' %} aria-current="page"{% endif %}>Work</a>
         <a href="{{ '/articles/' | relative_url }}"{% if page.nav == 'articles' %} aria-current="page"{% endif %}>Articles</a>
+        {%- if site.data.gallery %}
         <a href="{{ '/gallery/' | relative_url }}"{% if page.nav == 'gallery' %} aria-current="page"{% endif %}>Gallery</a>
+        {%- endif %}
         <a href="{{ '/about/' | relative_url }}"{% if page.nav == 'about' %} aria-current="page"{% endif %}>About</a>
         <a class="btn" href="#contact">Get in touch</a>
       </nav>
@@ -78,7 +78,9 @@
           <ul>
             <li><a href="{{ '/work/' | relative_url }}">Work</a></li>
             <li><a href="{{ '/articles/' | relative_url }}">Articles</a></li>
+            {%- if site.data.gallery %}
             <li><a href="{{ '/gallery/' | relative_url }}">Gallery</a></li>
+            {%- endif %}
             <li><a href="{{ '/about/' | relative_url }}">About</a></li>
           </ul>
         </div>
@@ -93,6 +95,7 @@
         <div>
           <h2>Elsewhere</h2>
           <ul>
+            <li><a href="mailto:{{ site.author.email }}">Email</a></li>
             <li><a href="{{ site.author.linkedin }}" rel="noopener">LinkedIn</a></li>
             <li><a href="{{ site.author.github }}" rel="noopener">GitHub</a></li>
             <li><a href="https://www.buymeacoffee.com/abnerjaredh" rel="noopener">Buy me a coffee</a></li>

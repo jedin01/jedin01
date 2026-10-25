@@ -10,7 +10,11 @@ description: Abner Lourenço, backend software engineer in Luanda. Camunda 8, BP
           <h1 class="display-xl" id="page-title">Hi, I'm Abner.</h1>
           <p class="body-l">I'm a backend software engineer in Luanda, Angola. At Selenium Digital Solutions I build the automated processes behind Angolan banks on Camunda 8: customer onboarding, integrations with core banking and middleware, and a dormant-account batch that runs end to end with no manual steps.</p>
         </div>
-{% include mascot.html %}
+        <figure class="portrait">
+          <img src="{{ site.author.photo | relative_url }}" width="400" height="400" alt="Portrait of Abner Lourenço" fetchpriority="high">
+          <span class="ring" aria-hidden="true" style="--d:64px;--c:var(--brand-teal);right:2%;top:4%"></span>
+          <span class="dot" aria-hidden="true" style="--d:18px;--c:var(--brand-blue);left:6%;bottom:12%"></span>
+        </figure>
       </div>
     </section>
 
