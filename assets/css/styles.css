@@ -246,9 +246,6 @@ p { margin: 0; }
 .hero-art { position: relative; aspect-ratio: 660 / 380; max-width: min(620px, 100%); width: 100%; justify-self: end; }
 /* Diagrama BPMN 2.0 com a notação do Camunda Modeler; o token é o anel azul da marca */
 .bpmn { display: block; width: 100%; height: auto; overflow: visible; }
-.bpmn-pool { fill: var(--surface-raised); stroke: var(--ink); stroke-width: 1.5; }
-.bpmn-pool-line { stroke: var(--ink); stroke-width: 1.5; }
-.bpmn-pool-label { font: 600 11px var(--font-sans); letter-spacing: .06em; fill: var(--ink); text-anchor: middle; }
 .bpmn-shape { fill: var(--surface-raised); stroke: var(--ink); stroke-width: 2; }
 .bpmn-task { fill: #FBFCF6; }
 .bpmn-end { stroke-width: 5; }
@@ -289,7 +286,7 @@ p { margin: 0; }
   .hero--intro .mascot-card { width: calc(100% + min(40%, (100vw - min(100vw, var(--container))) / 2 + var(--gutter) - 16px)); max-width: none; justify-self: start; }
 }
 .hero--intro .hero-copy .body-l { max-width: 560px; }
-.process-art { position: relative; aspect-ratio: 660 / 380; width: 100%; }
+.process-art { position: relative; aspect-ratio: 734 / 300; width: 100%; }
 
 /* Ecrãs menores (telemóveis e tablets na vertical, telemóveis deitados): sem o diagrama.
    O texto ocupa a largura e fica centrado na altura. */
